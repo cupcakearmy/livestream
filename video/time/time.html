@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: 0;
+		}
+
+		html,
+		body,
+		#clock {
+			height: 100%;
+			width: 100%
+		}
+	</style>
+</head>
+
+<body>
+	<div id="clock">
+		<span>
+			Test
+		</span>
+	</div>
+
+	<script src='fittext.js'></script>
+	<!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js'></script> -->
+	<script>
+		textfill(document.querySelector('#clock'))
+
+		// var urlParams;
+		// (function () {
+		// 	var match,
+		// 		pl = /\+/g, // Regex for replacing addition symbol with a space
+		// 		search = /([^&=]+)=?([^&]*)/g,
+		// 		decode = function (s) {
+		// 			return decodeURIComponent(s.replace(pl, " "));
+		// 		},
+		// 		query = window.location.search.substring(1);
+		// 	urlParams = {};
+		// 	while (match = search.exec(query))
+		// 		urlParams[decode(match[1])] = decode(match[2]);
+		// })();
+		// var output = document.getElementById("output");
+		// if (urlParams["style"]) output.setAttribute("style", urlParams["style"]);
+		// if (urlParams["bodyStyle"]) document.body.setAttribute("style", urlParams["bodyStyle"]);
+		// var c;
+		// setInterval(
+		// 	c = function () {
+		// 		output.innerText = moment().format(urlParams["format"] || '');
+		// 	}, 1000);
+		// c();
+	</script>
+</body>
+
+</html>
