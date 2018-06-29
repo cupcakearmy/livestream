@@ -5,6 +5,5 @@ services:
     build: ./
     ports:
       - 80:80
-      - 8000:8000
     volumes:
       - ./icecast.xml:/usr/share/icecast/icecast.xml
