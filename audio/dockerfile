@@ -1,0 +1,9 @@
+FROM alpine:3.7
+
+RUN apk add --no-cache icecast
+
+WORKDIR /usr/share/icecast
+RUN mkdir ./logs
+RUN chown -R icecast: .
+
+CMD [ "icecast", "-c","icecast.xml" ]

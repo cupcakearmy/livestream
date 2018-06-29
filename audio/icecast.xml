@@ -1,0 +1,53 @@
+<icecast>
+    <hostname>0.0.0.0</hostname>
+    <location>earth</location>
+
+    <listen-socket>
+        <port>80</port>
+    </listen-socket>
+
+    <authentication>
+        <source-password>hackme</source-password>
+        <admin-user>admin</admin-user>
+        <admin-password>hackme</admin-password>
+    </authentication>
+
+    <http-headers>
+        <header name="Access-Control-Allow-Origin" value="*" />
+    </http-headers>
+
+    <limits>
+        <clients>100</clients>
+        <sources>2</sources>
+        <queue-size>102400</queue-size>
+        <client-timeout>30</client-timeout>
+        <header-timeout>15</header-timeout>
+        <source-timeout>10</source-timeout>
+        <burst-on-connect>1</burst-on-connect>
+        <burst-size>65536</burst-size>
+    </limits>
+
+    <paths>
+        <basedir>/usr/share/icecast</basedir>
+        <logdir>./logs</logdir>
+        <!-- <pidfile>./icecast.pid</pidfile> -->
+        <webroot>./web</webroot>
+        <adminroot>./admin</adminroot>
+    </paths>
+
+    <security>
+        <chroot>0</chroot>
+        <changeowner>
+            <user>icecast</user>
+            <group>icecast</group>
+        </changeowner>
+    </security>
+
+    <mount type="normal">
+        <mount-name>/live</mount-name>
+        <max-listeners>796</max-listeners>
+        <stream-name>My audio stream</stream-name>
+        <stream-description>My audio description</stream-description>
+    </mount>
+
+</icecast>

@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  server:
+    build: ./
+    ports:
+      - 80:80
+      - 8000:8000
+    volumes:
+      - ./icecast.xml:/usr/share/icecast/icecast.xml
