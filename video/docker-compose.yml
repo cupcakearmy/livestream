@@ -6,6 +6,7 @@ services:
     ports:
       - 80:80
       - 1935:1935
+    restart: always
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf
       - ./srv:/srv
